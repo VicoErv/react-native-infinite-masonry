@@ -1,6 +1,7 @@
 {
   "name": "@vicoerv/react-native-infinite-masonry",
   "title": "React Native Masonry with Infinite Scrolling",
+  "description": "original: https://github.com/roj4s/react-native-infinite-masonry",
   "version": "0.0.3",
   "main": "index.js",
   "files": [
@@ -15,8 +16,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/roj4s/react-native-infinite-masonry.git",
-    "baseUrl": "https://github.com/roj4s/react-native-infinite-masonry"
+    "url": "git+https://github.com/vicoerv/react-native-infinite-masonry.git",
+    "baseUrl": "https://github.com/vicoerv/react-native-infinite-masonry"
   },
   "keywords": [
     "react-native"
