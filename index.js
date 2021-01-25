@@ -31,9 +31,9 @@ export default class Masonry extends Component {
 
     }
 
-    generateData(){
+    async generateData(){
 
-        const data = this.props.itemsProvider(this.pageSize);
+        const data = await this.props.itemsProvider(this.pageSize);
 
         this.setState({
             data: [...this.state.data, ...data]
@@ -41,14 +41,14 @@ export default class Masonry extends Component {
 
     }
 
-    handleScroll(e){
+    async handleScroll(e){
 
             const { y } = e.nativeEvent.contentOffset;
             const height = this.scrollViewHeight;
 
             let lastScreenOffset = height - this.vpHeight * 3;
             if( y >= lastScreenOffset ){
-                this.generateData();
+                await this.generateData();
             }
     }
 
@@ -56,9 +56,9 @@ export default class Masonry extends Component {
         this.scrollViewHeight = height;
     }
 
-    componentDidMount(){
+    async componentDidMount(){
 
-        this.generateData();
+        await this.generateData();
 
     }
 
