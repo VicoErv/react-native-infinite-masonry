@@ -37,6 +37,6 @@
     "react-native": "^0.61.5"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@vicoerv"
+    "registry": "https://npm.pkg.github.com/@vicoerv"
   }
 }
