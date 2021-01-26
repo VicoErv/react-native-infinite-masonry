@@ -6,7 +6,6 @@ import {
 
 
 export default class Masonry extends Component {
-
     constructor(props){
         super(props);
         this.pageSize = this.props.pageSize | 50;
@@ -14,7 +13,6 @@ export default class Masonry extends Component {
         this.vpWidth = Dimensions.get('window').width;
         this.vpHeight = Dimensions.get('window').height;
 
-        this.handleScroll = this.handleScroll.bind(this);
         this.logScrollViewSize = this.logScrollViewSize.bind(this);
         this.scrollViewHeight = 0;
 
@@ -41,17 +39,6 @@ export default class Masonry extends Component {
 
     }
 
-    async handleScroll(e){
-
-            const { y } = e.nativeEvent.contentOffset;
-            const height = this.scrollViewHeight;
-
-            let lastScreenOffset = height - this.vpHeight * 3;
-            if( y >= lastScreenOffset ){
-                await this.generateData();
-            }
-    }
-
     logScrollViewSize(width, height){
         this.scrollViewHeight = height;
     }
@@ -67,7 +54,6 @@ export default class Masonry extends Component {
 
             return (
                 <ScrollView
-                    onScroll={this.handleScroll}
                     onContentSizeChange={this.logScrollViewSize}
                     >
                      <View
